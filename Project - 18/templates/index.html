@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Rating System</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='responsive.css')}}">
+    <script src="{{url_for('static',filename='resp.js')}}" defer></script>
+</head>
+<body>
+    <nav id="navbar">
+        <ul class="navlist vresp">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="right-nav vresp">
+            <form action="/" method="post">
+                <input type="text" name="" id="">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    <main>
+        <div class="heading">
+            <h1>Advanced AI Rating System</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum eveniet obcaecati dolor, at laborum explicabo eius, quas error placeat cumque magnam qui dignissimos saepe voluptatum! Asperiores, laboriosam reprehenderit! Dicta tenetur labore, aspernatur sapiente voluptas saepe eius at neque autem laborum.</p>
+        </div>
+        <div class="form">
+            <form action="/" method="post">
+                <div class="input">
+                    <label for="rating">Your Rating:</label><br>
+                    <textarea name="rating" id="rating" cols="30" rows="10"></textarea>
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="submit-btn">Check Rating</button>
+                </div>
+            </form>
+        </div>
+        <div class="result">
+            {%if result%}
+            <h3>Your rating is {{result}}.</h3>
+            {%endif%}
+        </div>
+    </main>
+    <footer>
+        Copyrights &copy; VipulRating.com || ALL RIGHTS RESERVED.
+    </footer>
+</body>
+</html>

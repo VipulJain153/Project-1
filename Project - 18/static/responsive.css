@@ -1,0 +1,53 @@
+@media only screen and (max-width:750px) {
+
+    .burger {
+        display: block;
+    }
+
+    .vresp {
+        visibility: hidden;
+    }
+
+    .hresp {
+        height: 350px !important;
+    }
+
+    #navbar,.navlist {
+        flex-direction: column;
+    }
+
+    .navlist {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    #navbar::before {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .right-nav {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .right-nav input {
+        width: 100%;
+        margin: 12px 0px;
+    }
+    .form,.heading {
+        flex-direction: column;
+        position: relative;
+        outline: none;
+    }
+    .heading{
+        padding-bottom:60vh;
+    }
+}
